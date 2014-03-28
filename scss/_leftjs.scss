@@ -1,0 +1,33 @@
+﻿// basic stylings for left arm aside and span
+.leftarm, .left {
+	width: 122px;
+	height: 266px;
+	background: url('../images/left.png') no-repeat;
+	z-index:20;
+	display:block;
+	position:absolute;
+}
+
+// positioning for arm aside
+.leftarm {
+	top: 175;
+	left: 300;
+}
+
+// positioning for arm span
+.one .left {
+	top: -333;
+	left: 32;
+	opacity:0;
+}
+
+// hide arm aside when card is hovered over
+.leftarm.active {
+	opacity:0;
+}
+
+// effects for left arm when card one is hovered
+.one.active .left {
+	opacity:1;
+	@include animations(leftarm $arm);
+} 

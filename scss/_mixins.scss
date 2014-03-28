@@ -1,0 +1,27 @@
+﻿@mixin shadows($shadows...) {
+	-moz-box-shadow: $shadows;
+	-webkit-box-shadow: $shadows;
+	box-shadow: $shadows;
+}
+
+@mixin transforms($transforms...) {
+	-webkit-transform: $transforms;
+	-moz-transform:    $transforms;
+	-ms-transform:     $transforms;
+	-o-transform:      $transforms;
+	transform:         $transforms;
+}
+
+@mixin transitions($transitions...) {
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-o-transition: $transitions;
+	transition: $transitions;
+}
+
+@mixin animations($animations...) {
+	-webkit-animation: $animations; /* Safari 4+ */
+	-moz-animation: $animations; /* Fx 5+ */
+	-o-animation: $animations; /* Opera 12+ */
+	animation: $animations; /* IE 10+ */
+}

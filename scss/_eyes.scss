@@ -1,0 +1,119 @@
+﻿.one .eye1, .two .eye1, .three .eye1,
+.one .eye2, .two .eye2, .three .eye2 {
+	height: 420px;
+	position: absolute;
+	overflow: hidden;
+	z-index:-500;
+	@include transitions(all 1s ease);
+	
+	img {
+		position: relative;
+	}
+}
+
+
+.one:hover span img {
+	@include animations(eyes_one 10s);
+}
+
+.two:hover span img {
+	@include animations(eyes_two 10s);
+}
+
+.three:hover span img {
+	@include animations(eyes_three 10s);
+}
+
+
+
+@keyframes eyes_one {
+	0% {
+		top: -1000;
+		opacity: 0;
+	}
+	50% {
+		top: -500;
+		opacity:1;
+	}
+	100% {
+		top: -0;
+		opacity:0;
+	}
+}
+
+@keyframes eyes_two {
+	0% {
+		top: -1000;
+		opacity: 0;
+	}
+	50% {
+		top: -500;
+		opacity:1;
+	}
+	100% {
+		top: -0;
+		opacity: 0;
+	}
+}
+
+@keyframes eyes_three {
+	0% {
+		top: -1000;
+		opacity: 0;
+	}
+	50% {
+		top: -500;
+		opacity:1;
+	}
+	100% {
+		top: -0;
+		opacity: 0;
+	}
+}
+
+.one {
+	.eye1 {
+	top: -400;
+	left: 128;
+	@include transforms(skew(-20deg));
+	}
+	.eye2 {
+	top: -400;
+	left: 168;
+	@include transforms(skew(-20deg));	
+	}
+}
+
+
+.two { 
+	.eye1 {
+	top: -405;
+	left: 38;
+	} 
+	.eye2 {
+	top: -405;
+	left: 78;
+	}
+}
+
+
+.three {
+	.eye1 {
+	top: -400;
+	left: -15;
+	@include transforms(skew(15deg));
+	}
+	.eye2 {
+	top: -400;
+	left: -55;	
+	@include transforms(skew(15deg));
+	}
+}	
+
+
+.one:hover, .two:hover, .three:hover {
+	.eye1, .eye2 {
+	z-index: 500;
+	@include transitions(all 1s ease);
+	}
+}	

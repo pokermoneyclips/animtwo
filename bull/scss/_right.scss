@@ -1,0 +1,70 @@
+﻿.right_horn {
+	position: relative;
+	float:left;
+	width: 170px;
+	height:200px;
+}
+
+.r_horn {
+	width: 0;
+	height: 0;
+	border-left: 100px solid gold;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	position: absolute;
+	right: 0;
+	@include transforms(rotate(-20deg));
+}
+
+.r_horn_length {
+	width: 35px;
+	height: 30px;
+	background: gold;
+	position: absolute;
+	right: 95px;
+	top: 23px;
+	@include transforms(rotate(-20deg));
+}
+	
+.r_horn_2 {
+	position: absolute;
+			background: gold;
+			width: 85px;
+			height: 35px;
+			@include transforms(rotate(-15deg));
+			padding-left: 10px;
+			top: 30px;
+			left: -10px;
+}
+
+
+.r_round {
+	width: 105px;
+	height: 105px;
+	@include rounded(100%);
+	background: white;
+	position: absolute;
+	top: 30px;
+	right: 0;
+
+}
+
+.r_ear {
+	width: 35px;
+	height: 20px;
+	position: absolute;
+	top: 75px;
+	
+	background: gold;
+	margin-right: 25px;
+		&:after{
+			content: "";
+				width: 0;
+				height: 0;
+				border-left: 25px solid gold;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+				display: inline-block;
+				margin-left: 35px;
+		}
+}

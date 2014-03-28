@@ -1,0 +1,77 @@
+﻿// help from http://blogs.sitepointstatic.com/examples/tech/css3-transformations/backface2.html
+
+// styling for all three cards
+.card {
+	position:relative;
+	height:150px;
+	width:150px;
+	display:inline-block;
+}
+
+// stylings for the front and back of cards
+.card div {
+	position: absolute;
+	width:100px;
+	height:100px;
+	border:1px solid #000;
+	border-radius: 5px;
+}
+
+.one {
+z-index: 5000; // cards two and three active are floating over one so you cant click on it otherwise
+}
+
+// styling for back card (top)
+.back {
+	opacity:1;
+	background: #f2825b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f2825b 0%,#e55b2b 50%,#f07146 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
+	@include shadows(0px 0px 10px 10px #000);
+	@include transitions(all $backlength $arm+$headturn ease);
+}
+
+// styling for front of card (shown on hover)
+.front {
+	background: #fff;
+	font-size: 20px;
+	opacity:0;
+	padding: 10px;
+}
+
+.bottom {
+	margin-top:25px;
+	text-align:right;
+}
+
+
+// first mouseover event to flip back of card
+.active .back {
+	opacity:0;
+	@include shadows(0px 0px 5px 5px yellow, 0px 0px 10px 10px orange, 0px 0px 20px 20px #FF0000);
+	@include transitions(all $backlength $arm+$headturn ease);
+}
+
+// mouseover event for front of card
+.active .front {
+	width: 500px;
+	height: 500px;
+	margin-top: -500px;
+	opacity:1;
+	z-index: 5000000;
+	@include shadows(0px 0px 10px 10px #FF0000);
+	@include transitions(all 2s $arm+$headturn+3s ease-out);
+}
+
+.two .front {
+	left: -175px;
+}
+
+.three .front {
+	left: -330px;
+}

@@ -1,0 +1,185 @@
+#board {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  background: #FF0000;
+  text-align: center;
+  height: 300px;
+  perspective: 500px; }
+
+#start {
+  width: 300px;
+  background: #000;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px; }
+
+.boxes {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: 1px solid #000;
+  display: inline-block;
+  margin: 10px;
+  background: white;
+  z-index: 20;
+  top: 0; }
+
+#box1 {
+  left: 0; }
+
+#box1.active {
+  left: 600;
+  -webkit-animation: boxone 5s;
+  /* Safari 4+ */
+  -moz-animation: boxone 5s;
+  /* Fx 5+ */
+  -o-animation: boxone 5s;
+  /* Opera 12+ */
+  animation: boxone 5s;
+  /* IE 10+ */ }
+
+#box2 {
+  left: 300; }
+
+#box2.active {
+  left: 0;
+  -webkit-animation: boxtwo 5s;
+  /* Safari 4+ */
+  -moz-animation: boxtwo 5s;
+  /* Fx 5+ */
+  -o-animation: boxtwo 5s;
+  /* Opera 12+ */
+  animation: boxtwo 5s;
+  /* IE 10+ */ }
+
+#box3 {
+  left: 600; }
+
+#box3.active {
+  left: 300;
+  -webkit-animation: boxthree 5s;
+  /* Safari 4+ */
+  -moz-animation: boxthree 5s;
+  /* Fx 5+ */
+  -o-animation: boxthree 5s;
+  /* Opera 12+ */
+  animation: boxthree 5s;
+  /* IE 10+ */ }
+
+.ball {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: blue;
+  opacity: 1;
+  position: absolute;
+  top: 200px; }
+
+.ball.hide {
+  opacity: 0; }
+
+@keyframes boxone {
+  0% {
+    left: 0; }
+
+  10% {
+    left: 300; }
+
+  20% {
+    left: 600; }
+
+  30% {
+    left: 300; }
+
+  40% {
+    left: 0; }
+
+  50% {
+    left: 600; }
+
+  60% {
+    left: 0; }
+
+  70% {
+    left: 300; }
+
+  80% {
+    left: 600; }
+
+  90% {
+    left: 0; }
+
+  100% {
+    left: 600; } }
+
+@keyframes boxtwo {
+  0% {
+    left: 300; }
+
+  10% {
+    left: 600; }
+
+  20% {
+    left: 0; }
+
+  30% {
+    left: 600; }
+
+  40% {
+    left: 300; }
+
+  50% {
+    left: 0; }
+
+  60% {
+    left: 300; }
+
+  70% {
+    left: 600; }
+
+  80% {
+    left: 0; }
+
+  90% {
+    left: 300; }
+
+  100% {
+    left: 0; } }
+
+@keyframes boxthree {
+  0% {
+    left: 600; }
+
+  10% {
+    left: 0; }
+
+  20% {
+    left: 300; }
+
+  30% {
+    left: 0; }
+
+  40% {
+    left: 600; }
+
+  50% {
+    left: 300; }
+
+  60% {
+    left: 600; }
+
+  70% {
+    left: 0; }
+
+  80% {
+    left: 300; }
+
+  90% {
+    left: 600; }
+
+  100% {
+    left: 300; } }

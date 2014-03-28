@@ -1,0 +1,88 @@
+﻿@import '_mixins.scss';
+
+.wrapper {
+width: 900px;
+margin: 0px auto;
+border:1px solid #000;
+min-height: 400px;
+
+}
+
+
+.box1 {
+width: 200px;
+background:#000;
+@include shadows(3px 3px 5px 7px #ff0000, 5px 5px 6px 9px #cccccc);
+@include transitions(all 5s 1s ease-in);
+	&:hover {
+		@include shadows(1px 1px 2px 3px #ff0000, 10px 10px 6px 13px #cccccc);
+		@include transforms(perspective(100px) scale(0.25) skew(45deg) rotate(180deg));
+	}
+}
+
+h1 {
+border-radius: 10px;
+padding: 10px;
+border:1px solid #000;
+background: #000;
+@include transitions(all 5s 0.25s ease-out);
+color:#fff;
+	&:hover {
+	color:#000;
+	background: #fff;
+	@include shadows(0px 0px 5px 5px #ff0000);
+	@include transforms(scale(3));
+	}
+}
+
+.box3 {
+margin: 0 85px;
+}
+
+.card {
+position:relative;
+overflow:hidden;
+height:200px;
+width:200px;
+display:inline-block;
+padding: 20px;
+}
+
+.card div {
+	position:absolute;
+	-webkit-transition: all 3s ease;
+	transition: all 3s ease;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width:100px;
+	height:100px;
+border:1px solid #000;
+border-radius: 5px;
+@include shadows(0px 0px 10px 10px #000);
+	}
+
+.back {
+
+	background: #ff0000;
+	-webkit-transform: perspective(800px) rotateY(0deg);
+	transform: perspective(800px) rotateY(0deg);
+}
+
+.front
+{
+
+	-webkit-transform: perspective(800px) rotateY(-179.9deg);
+	transform: perspective(800px) rotateY(-179.9deg);
+}
+
+.card:hover .back, .card:focus .back
+{
+	-webkit-transform: perspective(800px) rotateY(179.9deg);
+	transform: perspective(800px) rotateY(179.9deg);
+}
+
+.card:hover .front, .card:focus .front
+{
+	-webkit-transform: perspective(800px) rotateY(0deg);
+	transform: perspective(800px) rotateY(0deg);
+}

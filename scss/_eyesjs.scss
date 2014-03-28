@@ -1,0 +1,74 @@
+﻿.one .eye1, .two .eye1, .three .eye1,
+.one .eye2, .two .eye2, .three .eye2 {
+	height: 420px;
+	position: absolute;
+	overflow: hidden;
+	z-index:-500;
+	@include transitions(all 1s ease);
+	
+	img {
+		position: relative;
+	}
+}
+
+
+.one.active span img {
+	@include animations(eyes_one $eyes $arm+$headturn);
+}
+
+.two.active span img {
+	@include animations(eyes_two $eyes $arm+$headturn);
+}
+
+.three.active span img {
+	@include animations(eyes_three $eyes $arm+$headturn);
+}
+
+
+
+.one {
+	.eye1 {
+	top: -400;
+	left: 128;
+	@include transforms(skew(-20deg));
+	}
+	.eye2 {
+	top: -400;
+	left: 168;
+	@include transforms(skew(-20deg));	
+	}
+}
+
+
+.two { 
+	.eye1 {
+	top: -405;
+	left: 38;
+	} 
+	.eye2 {
+	top: -405;
+	left: 78;
+	}
+}
+
+
+.three {
+	.eye1 {
+	top: -400;
+	left: -15;
+	@include transforms(skew(15deg));
+	}
+	.eye2 {
+	top: -400;
+	left: -55;	
+	@include transforms(skew(15deg));
+	}
+}	
+
+
+.one.active, .two.active, .three.active {
+	.eye1, .eye2 {
+	z-index: 500;
+	@include transitions(all 1s ease);
+	}
+}	

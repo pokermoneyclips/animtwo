@@ -1,0 +1,14 @@
+﻿.zoltar_head {
+	position:absolute;
+	z-index:25;
+	top: -10;
+	left: 405;
+	// http://24ways.org/2010/intro-to-css-3d-transforms/
+	perspective:200px; // this allows for the animation to appear in 3d space
+}
+
+.zoltar_head.active {	
+	img {		
+		@include animations(headturn $headturn $arm);
+	}
+}

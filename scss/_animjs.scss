@@ -1,0 +1,113 @@
+﻿// Timespans
+$arm: 5s;
+$headturn: 10s;
+$backlength: 5s;
+$eyes: 5s;
+
+
+// Left Arm
+@keyframes leftarm {
+	0% {
+	}
+	50% {
+		top: -320;
+		left: 28;
+		@include transforms(scale(1.10) skew(-5deg, 0));	
+	}
+	100% {
+	}
+}
+
+// Right Arm Card 2
+@keyframes rightarmtwo {
+	0% {
+	}
+	50% {
+		top: -315;
+		left: 110;
+		@include transforms(skew(-10deg, 10deg) scale(1.05) translate(20px));
+	}
+	100% {
+	}
+}
+
+// Right Arm Card 3
+@keyframes rightarmthree {
+	0% {
+	}
+	50% {
+		top:-320;
+		left:0;
+		@include transforms(scale(1.05));
+	}
+	100% {
+	}
+}
+
+// head turn
+@keyframes headturn {
+	0%{
+		@include transforms(rotateY(0deg) scale(1));
+	}
+
+	25% {
+		@include transforms(rotateY( 50deg) scale(1.1));
+	}
+
+	50% {
+		@include transforms(rotateY(0deg) scale(1));
+	}
+
+	75% {
+		@include transforms(rotateY( -50deg) scale(1.1));
+	}
+	100% {
+		@include transforms(rotateY(0deg) scale(1));
+	}
+}
+
+
+@keyframes eyes_one {
+	0% {
+		top: -1000;
+		opacity: 0;
+	}
+	50% {
+		top: -500;
+		opacity:1;
+	}
+	100% {
+		top: -0;
+		opacity:0;
+	}
+}
+
+@keyframes eyes_two {
+	0% {
+		top: -1000;
+		opacity: 0;
+	}
+	50% {
+		top: -500;
+		opacity:1;
+	}
+	100% {
+		top: -0;
+		opacity: 0;
+	}
+}
+
+@keyframes eyes_three {
+	0% {
+		top: -1000;
+		opacity: 0;
+	}
+	50% {
+		top: -500;
+		opacity:1;
+	}
+	100% {
+		top: -0;
+		opacity: 0;
+	}
+}

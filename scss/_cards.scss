@@ -1,0 +1,79 @@
+﻿// help from http://blogs.sitepointstatic.com/examples/tech/css3-transformations/backface2.html
+
+// styling for all three cards
+.card {
+	position:relative;
+	height:150px;
+	width:150px;
+	display:inline-block;
+}
+
+// stylings for the front and back of cards
+.card div {
+	position:absolute;
+	@include transitions(all 12s ease);
+	width:100px;
+	height:100px;
+	border:1px solid #000;
+	border-radius: 5px;
+	@include shadows(0px 0px 10px 10px #000);
+}
+
+// styling for back card (top)
+.back {
+	background: #f2825b; /* Old browsers */
+	opacity: 1;
+}
+
+// styling for front of card (shown on hover)
+.front {
+	background: #fff;
+	font-size: 30px;
+	opacity: 0;
+}
+
+// adjustments to card text contained within spans
+.clubs {
+color: green;
+display:block;
+	&:after {
+	content:"\2663";
+	}
+}
+
+.spades {
+color: #000;
+display:block;
+	&:after {
+	content:"\2660";
+	}
+}
+
+.diamonds {
+color: teal;
+display:block;
+	&:after {
+	content:"\2666";
+	}
+}
+
+.bottom {
+	margin-top:25px;
+	text-align:right;
+	@include transforms(rotateX(180deg));
+
+}
+
+
+// first mouseover event to flip back of card
+.card:hover .back {
+	opacity: 0;
+	background: yellow;
+	@include shadows(0px 0px 5px 5px yellow, 0px 0px 10px 10px orange, 0px 0px 20px 20px #FF0000);
+	@include transforms(scale(1.5));
+}
+
+// mouseover event for front of card
+.card:hover .front {
+	opacity:1;
+}

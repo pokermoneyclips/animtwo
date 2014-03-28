@@ -1,0 +1,89 @@
+.wrapper {
+  width: 900px;
+  margin: 0px auto;
+  border: 1px solid #000;
+  min-height: 400px; }
+
+.box1 {
+  width: 200px;
+  background: #000;
+  -moz-box-shadow: 3px 3px 5px 7px red, 5px 5px 6px 9px #cccccc;
+  -webkit-box-shadow: 3px 3px 5px 7px red, 5px 5px 6px 9px #cccccc;
+  box-shadow: 3px 3px 5px 7px red, 5px 5px 6px 9px #cccccc;
+  -webkit-transition: all 5s 1s ease-in;
+  -moz-transition: all 5s 1s ease-in;
+  -o-transition: all 5s 1s ease-in;
+  transition: all 5s 1s ease-in; }
+  .box1:hover {
+    -moz-box-shadow: 1px 1px 2px 3px red, 10px 10px 6px 13px #cccccc;
+    -webkit-box-shadow: 1px 1px 2px 3px red, 10px 10px 6px 13px #cccccc;
+    box-shadow: 1px 1px 2px 3px red, 10px 10px 6px 13px #cccccc;
+    -webkit-transform: perspective(100px) scale(0.25) skew(45deg) rotate(180deg);
+    -moz-transform: perspective(100px) scale(0.25) skew(45deg) rotate(180deg);
+    -ms-transform: perspective(100px) scale(0.25) skew(45deg) rotate(180deg);
+    -o-transform: perspective(100px) scale(0.25) skew(45deg) rotate(180deg);
+    transform: perspective(100px) scale(0.25) skew(45deg) rotate(180deg); }
+
+h1 {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #000;
+  -webkit-transition: all 5s 0.25s ease-out;
+  -moz-transition: all 5s 0.25s ease-out;
+  -o-transition: all 5s 0.25s ease-out;
+  transition: all 5s 0.25s ease-out;
+  color: #fff; }
+  h1:hover {
+    color: #000;
+    background: #fff;
+    -moz-box-shadow: 0px 0px 5px 5px red;
+    -webkit-box-shadow: 0px 0px 5px 5px red;
+    box-shadow: 0px 0px 5px 5px red;
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3); }
+
+.box3 {
+  margin: 0 85px; }
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  padding: 20px; }
+
+.card div {
+  position: absolute;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 10px 10px black;
+  -webkit-box-shadow: 0px 0px 10px 10px black;
+  box-shadow: 0px 0px 10px 10px black; }
+
+.back {
+  background: #ff0000;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg); }
+
+.front {
+  -webkit-transform: perspective(800px) rotateY(-179.9deg);
+  transform: perspective(800px) rotateY(-179.9deg); }
+
+.card:hover .back, .card:focus .back {
+  -webkit-transform: perspective(800px) rotateY(179.9deg);
+  transform: perspective(800px) rotateY(179.9deg); }
+
+.card:hover .front, .card:focus .front {
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg); }

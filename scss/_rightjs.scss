@@ -1,0 +1,54 @@
+﻿// Defines the span element for cards two and three and the arm article
+.right, .arm {
+	width:107px;
+	height:300px;
+	display:block;
+	position:absolute;
+	background: url('../images/arm.png') no-repeat;
+	z-index:20;
+}
+
+// positioning for the arm article
+.arm {
+	top: 187;
+	left: 570;
+	opacity:1;
+}
+
+// top position the arm span
+.card .right {
+	top: -322;
+}
+
+// left position the arm span for card two
+.two .right {
+	left: 148;
+}
+
+// left position the arm span for card three
+.three .right {
+	left:-4;
+}
+
+// change opacity of arm span to zero on hover
+.active .right, .off .right {
+	opacity:0;
+}
+
+// change the opacity of arm article to zero on hover
+.arm.active {
+	opacity:0;
+}
+
+
+// effects and movement for right arm on second card
+.two.active .right {
+	opacity:1;
+	@include animations(rightarmtwo $arm);
+}
+
+// effects and movement for right arm on third card
+.three.active .right {
+	opacity:1;
+	@include animations(rightarmthree $arm);
+}
